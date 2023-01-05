@@ -143,6 +143,7 @@ git push origin main
 ```
 git pull
 ```
+Надо кое что попробовать!
 
 
 
