@@ -116,6 +116,37 @@ git branch -d <branch_name>
 
 Далее необходимо "познакомить" локальную версию Git на вашем компьютере и учётную запись GitHub. 
 
+Создаётся репозиторий на GitHub. Есть несколько вариантов дальнейших действий.
+
+1. Если локальный репозиторий ещё не создан, можно создать его из коммандной строки. для этого необходимо выполнить следующие команды:
+```
+echo "# name_repository " >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/<Name_GitHub>/<Name_repository>
+git push -u origin main
+``` 
+2. Если репозиторий уже существует, необходимо просто связать его с удалённым спомощью следующих команд:
+```
+git remote add origin https://github.com/<Name_GitHub>/<Name_repository>
+git branch -M main
+git push -u origin main
+```
+Как правило главная ветка на GitHub именуется *main*. 
+В дальнейшем для экспорта изменений в удалённый репозиторий используется команда
+```
+git push origin main
+```
+Для импорта изменений из удалённого репозитория используется команда
+```
+git pull
+```
+
+
+
+
 
 
 
